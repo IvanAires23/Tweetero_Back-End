@@ -1,4 +1,4 @@
-export class User {
+export default class User {
     private username: string;
     private avatar: string;
 
@@ -6,6 +6,4 @@ export class User {
         this.username = userName;
         this.avatar = avatar
     }
-
-
 }

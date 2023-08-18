@@ -1,5 +1,5 @@
 import { IsNotEmpty, IsString, IsUrl } from "class-validator";
-import { User } from "../entities/users.entity";
+import User from "../entities/users.entity";
 
 export class CreateUserDTO {
     @IsString()
