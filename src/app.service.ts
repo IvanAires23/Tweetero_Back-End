@@ -4,8 +4,8 @@ import { User } from './entities/users.entity';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getHealth(): string {
+    return "I'm okay!";
   }
 }
 

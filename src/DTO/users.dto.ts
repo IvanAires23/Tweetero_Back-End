@@ -7,7 +7,9 @@ export class CreateUserDTO {
     username: string;
 
     @IsString()
-    @IsNotEmpty()
+    @IsNotEmpty({
+        message: "All fields are required!"
+    })
     @IsUrl()
     avatar: string;
 
