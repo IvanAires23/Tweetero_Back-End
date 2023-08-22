@@ -1,19 +1,16 @@
 import { IsNotEmpty, IsString, IsUrl } from "class-validator";
-import User from "../entities/users.entity";
 
-export class CreateUserDTO {
-    @IsString()
-    @IsNotEmpty()
-    username: string;
-
+export class LoginDTO {
     @IsString()
     @IsNotEmpty({
         message: "All fields are required!"
     })
-    @IsUrl()
-    avatar: string;
+    username: string;
 
-    toUser() {
-        return new User(this.username, this.avatar)
-    }
+    @IsString()
+    @IsUrl()
+    @IsNotEmpty({
+        message: "All fields are required!"
+    })
+    avatar: string;
 }
